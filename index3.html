@@ -1,0 +1,38 @@
+<html>
+    <head></head>
+<body>        
+	<script>
+		class Instrument {
+			constructor(name, family){
+				this.name = name
+                this.family = family
+			}
+
+			play() {
+				console.log(`A ${this.name} belongs to the ${this.family} family with a range of ${this.range} and is one of the  ${this.difficulty} to learn. `);
+			}
+		}
+
+        class Woodwind extends Instrument{
+            constructor(name, family,range,) {
+            super(name,family)
+            this.range = range
+            }
+        }
+
+        class Brass extends Instrument {
+            constructor (name, family, range, difficulty){
+            super (name,family,range)
+            this.difficulty = difficulty
+            }
+        }
+
+        const flute = new Woodwind ("flute", "woodwind","alto","easier")
+        const trumpet = new Brass ("trumpet","brass", "alto", "easier")
+        console.log(flute.play());
+        console.log(trumpet.play());       
+    
+
+    </script>
+</body>
+</html>
